@@ -1,0 +1,246 @@
+{
+  "info": {
+    "_postman_id": "49710db5-e3fd-4df6-9a0f-a581566ecb8e",
+    "name": "Tarea GraphQL",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52697451",
+    "_collection_link": "https://go.postman.co/collection/52697451-49710db5-e3fd-4df6-9a0f-a581566ecb8e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Países",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Tiene data\", function () {\r",
+              "    const body = pm.response.json();\r",
+              "    pm.expect(body.data).to.exist;\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query {\r\n  countries {\r\n    code\r\n    name\r\n  }\r\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "https://countries.trevorblades.com/graphql",
+          "protocol": "https",
+          "host": [
+            "countries",
+            "trevorblades",
+            "com"
+          ],
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "País por código",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Tiene data\", function () {\r",
+              "    const body = pm.response.json();\r",
+              "    pm.expect(body.data).to.exist;\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query {\r\n  country(code: \"CO\") {\r\n    name\r\n    capital\r\n    currency\r\n  }\r\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "https://countries.trevorblades.com/graphql",
+          "protocol": "https",
+          "host": [
+            "countries",
+            "trevorblades",
+            "com"
+          ],
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Query Anidada",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Tiene data\", function () {\r",
+              "    const body = pm.response.json();\r",
+              "    pm.expect(body.data).to.exist;\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query {\r\n  country(code: \"CO\") {\r\n    name\r\n    continent {\r\n      name\r\n    }\r\n  }\r\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "https://countries.trevorblades.com/graphql",
+          "protocol": "https",
+          "host": [
+            "countries",
+            "trevorblades",
+            "com"
+          ],
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Continentes",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Tiene data\", function () {\r",
+              "    const body = pm.response.json();\r",
+              "    pm.expect(body.data).to.exist;\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query {\r\n  continents {\r\n    name\r\n    code\r\n  }\r\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "https://countries.trevorblades.com/graphql",
+          "protocol": "https",
+          "host": [
+            "countries",
+            "trevorblades",
+            "com"
+          ],
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Idiomas",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Tiene data\", function () {\r",
+              "    const body = pm.response.json();\r",
+              "    pm.expect(body.data).to.exist;\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "graphql",
+          "graphql": {
+            "query": "query {\r\n  languages {\r\n    name\r\n    code\r\n  }\r\n}",
+            "variables": ""
+          }
+        },
+        "url": {
+          "raw": "https://countries.trevorblades.com/graphql",
+          "protocol": "https",
+          "host": [
+            "countries",
+            "trevorblades",
+            "com"
+          ],
+          "path": [
+            "graphql"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

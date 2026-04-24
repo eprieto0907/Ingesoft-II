@@ -1,0 +1,221 @@
+{
+  "info": {
+    "_postman_id": "9fbc9a9f-3289-4ac0-9414-5aaa15455262",
+    "name": "Tarea API - UNAL",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52697451",
+    "_collection_link": "https://go.postman.co/collection/52697451-9fbc9a9f-3289-4ac0-9414-5aaa15455262?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Todos los países",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Devuelve datos\", function () {\r",
+              "    const body = pm.response.json();\r",
+              "    pm.expect(body.length).to.be.above(0);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://restcountries.com/v3.1/all?fields=name,capital",
+          "protocol": "https",
+          "host": [
+            "restcountries",
+            "com"
+          ],
+          "path": [
+            "v3.1",
+            "all"
+          ],
+          "query": [
+            {
+              "key": "fields",
+              "value": "name,capital"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Nombre",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Es Colombia\", function () {\r",
+              "    const body = pm.response.json();\r",
+              "    pm.expect(body[0].name.common).to.eql(\"Colombia\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://restcountries.com/v3.1/name/colombia",
+          "protocol": "https",
+          "host": [
+            "restcountries",
+            "com"
+          ],
+          "path": [
+            "v3.1",
+            "name",
+            "colombia"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Por Código",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Código correcto\", function () {\r",
+              "    const body = pm.response.json();\r",
+              "    pm.expect(body[0].cca2).to.eql(\"CO\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://restcountries.com/v3.1/alpha/CO",
+          "protocol": "https",
+          "host": [
+            "restcountries",
+            "com"
+          ],
+          "path": [
+            "v3.1",
+            "alpha",
+            "CO"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Por Región",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Región válida\", function () {\r",
+              "    const body = pm.response.json();\r",
+              "    pm.expect(body[0]).to.have.property(\"region\");\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://restcountries.com/v3.1/region/americas",
+          "protocol": "https",
+          "host": [
+            "restcountries",
+            "com"
+          ],
+          "path": [
+            "v3.1",
+            "region",
+            "americas"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Por Idioma",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status 200\", function () {\r",
+              "    pm.response.to.have.status(200);\r",
+              "});\r",
+              "\r",
+              "pm.test(\"Devuelve países\", function () {\r",
+              "    const body = pm.response.json();\r",
+              "    pm.expect(body.length).to.be.above(0);\r",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://restcountries.com/v3.1/lang/spanish",
+          "protocol": "https",
+          "host": [
+            "restcountries",
+            "com"
+          ],
+          "path": [
+            "v3.1",
+            "lang",
+            "spanish"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
