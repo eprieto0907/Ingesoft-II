@@ -1,0 +1,5 @@
+factory\Moto.class
+factory\VehiculoFactory.class
+factory\MainFactory.class
+factory\Vehiculo.class
+factory\Carro.class

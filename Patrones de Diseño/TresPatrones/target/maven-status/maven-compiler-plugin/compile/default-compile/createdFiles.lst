@@ -1,0 +1,8 @@
+tres\ContextoPago.class
+tres\Main.class
+tres\CryptoAPI.class
+tres\PagoTarjeta.class
+tres\PagoPayPal.class
+tres\CryptoAdapter.class
+tres\PagoFactory.class
+tres\MetodoPago.class
