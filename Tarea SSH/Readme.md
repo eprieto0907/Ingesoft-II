@@ -4,72 +4,58 @@
 
 ### Paso a Paso del Laboratorio
 
-1.  Nos ubicamos en la carpeta donde están los archivos y creamos un servidor.
+1.  Instalamos las dependencias Express y JWT.
 
-![](Imagen1.png)
+![](media/image1.png){width="5.808836395450569in" height="6.100528215223097in"}
 
-2.  Abrimos una segunda pestaña de Powershell y nos dirigimos de nuevo a la misma carpeta donde están los archivos, luego hacemos el registro del usuario.
+2.  Nos ubicamos en la carpeta donde están los archivos y creamos un servidor.
 
-![](Imagen2.png)
+![](media/image2.png){width="5.683825459317585in" height="1.7918219597550307in"}
 
-3.  Al hacer el login nos devuelve nuestro token.
+3.  Abrimos una segunda pestaña de Powershell y nos dirigimos de nuevo a la misma carpeta donde están los archivos, luego hacemos el registro del usuario.
 
-![](Imagen3.png)
+4.  Al hacer el login nos devuelve nuestro token.
 
-4.  Guardamos el token y verificamos que se halla guardado con éxito.
+![](media/image3.png){width="6.6930555555555555in" height="0.6388888888888888in"}
 
-![](Imagen4.png)
+5.  Guardamos el token y verificamos que se halla guardado con éxito.
 
-5.  Intentamos hacer un GET sin token y nos debe salir error 401 al intentarlo.
+![](media/image4.png){width="6.6930555555555555in" height="0.25in"}
 
-![](Imagen5.png)
+6.  Intentamos hacer un GET sin token y nos debe salir error 401 al intentarlo.
 
-6.  Ahora realizamos el GET con el token.
+![](media/image5.png){width="6.6930555555555555in" height="0.8770833333333333in"}
 
-![](Imagen6.png)
+7.  Ahora realizamos el GET con el token.
 
-7.  Creamos una nueva tarea.
+![](media/image6.png){width="6.6930555555555555in" height="0.6965277777777777in"}
 
-![](Imagen7.png)
+8.  Creamos una nueva tarea.
 
-8.  Y ahora creamos otra tarea para luego hacer PUT y DELETE.
+![](media/image7.png){width="6.6930555555555555in" height="0.725in"}
 
-![](Imagen8.png)
+9.  Y ahora creamos otra tarea para luego hacer PUT y DELETE.
 
-9.  Actualizamos con PUT.
+![](media/image8.png){width="6.6930555555555555in" height="0.8444444444444444in"}
 
-![](Imagen9.png)
+10. Actualizamos con PUT.
 
-10. Ahora lo borramos con DELETE
+![](media/image9.png){width="6.6930555555555555in" height="0.7395833333333334in"}
 
-![](Imagen10.png)
+11. Ahora lo borramos con DELETE
 
-11. Ahora en Windows vamos a **"Configuración\>Sistema\>Características Opcionales\>Ver características\>"**. Buscamos en características disponibles por Servidor OpenSSH.
+![](media/image10.png){width="6.6930555555555555in" height="0.2013888888888889in"}
 
-![](Imagen11.png)
+12. Modificamos el servidor para que escuche, de esta forma.
 
-12. Abrimos otro Powershell en Admin para iniciar SSH
+![](media/image11.png){width="6.6930555555555555in" height="2.6555555555555554in"}
 
-![](Imagen12.png)
+13. ![](media/image12.png){width="6.75in" height="2.970873797025372in"}Utilizando el usuario y la IP del PC1, abrímos el PC2 y nos conectamos por ssh, luego registramos el usuario en la PC2.
 
-13. Abrimos Firewall SSH
+14. ![](media/image13.png){width="7.199305555555555in" height="0.225in"}Guardamos el token en nuestra otra PC.
 
-![](Imagen13.png)
+15. Creamos una tarea y la actualizamos.
 
-14. Verificamos que esté corriendo
+![](media/image14.png){width="8.183333333333334in" height="2.0407185039370077in"}
 
-![](Imagen14.png)
-
-15. Creamos un usuario local y le damos permisos
-
-![](Imagen15.png)
-
-16. Desde una segunda PC nos conectamos a la PC1 con el usuario y la IP de esta y usamos la contraseña
-
-![](Imagen16.png)
-
-![](Imagen17.png)
-
-17. Desde la PC1 copiamos el token y lo guardamos en la PC2, y usamos el GET con token.
-
-![](Imagen18.png)
+16. ![](media/image15.png){width="8.14988845144357in" height="1.278513779527559in"}Para finalizar, borramos la actualización.
